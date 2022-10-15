@@ -1,2 +1,2 @@
-# playtheraygroup
+# playtherapygroup
 ODIN Project Assignment
