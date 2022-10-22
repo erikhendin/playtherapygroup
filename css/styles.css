@@ -20,9 +20,6 @@ font-family:Verdana, Geneva, Tahoma, sans-serif;
     height:100%;
 }
 
-
-
-
 .header, .footer{
     display:flex;
     flex-direction:row;
@@ -45,14 +42,14 @@ font-family:Verdana, Geneva, Tahoma, sans-serif;
     background-color: #1F2937;
 }
 
-/*REGEX!
-/*for every section we want the margin to be xxx% margin-left and margin-right*/
-/*however, background color should stretch all the way to edge of browser*/
-/*this way I can control margin uniformly but still have background color stretch uniformly*/
-div[class^="cnt_"] {
-    margin-left:5%; 
-    margin-right:5%;
+/* When browser size is less than 981px wide, hide the boilerplate image*/
+@media only screen and (max-width: 980px) {
+    .rightpanel, .rightpanel img {
+        display:none;
+  }
 }
+
+
 
 .cnt_thumbnails_container{
     display:flex;
@@ -61,6 +58,13 @@ div[class^="cnt_"] {
     align-items:center;
     flex:1; 
     gap:25px;
+    margin-left:5%; 
+    margin-right:5%;
+}
+
+.cnt_thumbnails_container, .cnt_CTA_container {
+    margin-left:5%; 
+    margin-right:5%;
 }
 
 .cnt_thumbnails_container > p {
@@ -70,7 +74,6 @@ div[class^="cnt_"] {
     font-size:36px;
 }
 
-/************/
 .cards {
     display:flex;
     flex-wrap:wrap;
@@ -106,7 +109,7 @@ div[class^="cnt_"] {
        padding: 10px;
        font-size:16px;
    }
-/************/
+
 .logotext{
     color:white;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
@@ -147,8 +150,6 @@ div[class^="cnt_"] {
     justify-content:space-evenly;
     align-items:center;
     flex:auto;
-/*    background-color:#3882f6;
-*/ 
     background-image: linear-gradient(140deg, #3882f6 0%, #188000 50%, #3882F6 75% );    
     opacity: 0.95;
     border-radius:15px;   
@@ -162,6 +163,21 @@ div[class^="cnt_"] {
     border-color:white;
 }
 
+button{
+    color:#FFF;
+    background-color:#3882F6;
+    width:100px;
+    min-height:35px;
+    border-radius: 5px;
+    transition-duration: 0.4s;
+}
+  
+  .buttoncta:hover {
+    background-color: #FFF;
+    color: black;
+  }
+
+
 .header{
     justify-content:space-between;    
     margin: 0;
@@ -171,7 +187,7 @@ div[class^="cnt_"] {
 }
 
 .footer{
-    flex-flow:row wrap;
+    flex-flow:row;
     justify-content:center;
     align-items:center;
     padding-left:5%;
@@ -239,11 +255,6 @@ div[class^="cnt_"] {
     display:flex;
 }
 
-@media only screen and (max-width: 980px) {
-    .rightpanel, .rightpanel img {
-        display:none;
-  }
-}
 
 .hero-main-text{
     color:#F9FAF8;
@@ -251,16 +262,3 @@ div[class^="cnt_"] {
     font-weight:bolder;
 }
 
-button{
-    color:#FFF;
-    background-color:#3882F6;
-    width:100px;
-    min-height:35px;
-    border-radius: 5px;
-    transition-duration: 0.4s;
-}
-  
-  .buttoncta:hover {
-    background-color: #FFF;
-    color: black;
-  }
