@@ -1,0 +1,266 @@
+* {
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html, body {
+height:100%;
+margin:0;
+font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    flex-wrap:nowrap;
+    justify-content: flex-start;
+    align-items:stretch;
+    align-content:stretch;
+    height:100%;
+}
+
+
+
+
+.header, .footer{
+    display:flex;
+    flex-direction:row;
+    height: 100px;
+    width:100%;
+    color:rgb(255, 255, 255);
+    background-color: #1F2937;
+    flex:1;
+}
+
+.boilerplate{
+    display:flex;
+    flex-direction:row wrap;
+    justify-content:space-between;
+    padding-left:5%;
+    padding-right:5%;
+    padding-top:15px;
+    padding-bottom:15px;
+    column-gap:25px;
+    background-color: #1F2937;
+}
+
+/*REGEX!
+/*for every section we want the margin to be xxx% margin-left and margin-right*/
+/*however, background color should stretch all the way to edge of browser*/
+/*this way I can control margin uniformly but still have background color stretch uniformly*/
+div[class^="cnt_"] {
+    margin-left:5%; 
+    margin-right:5%;
+}
+
+.cnt_thumbnails_container{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    flex:1; 
+    gap:25px;
+}
+
+.cnt_thumbnails_container > p {
+    padding:15px;
+    color:#1F2937;
+    font-weight:bolder;
+    font-size:36px;
+}
+
+/************/
+.cards {
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction:row;
+    gap:15px;
+    background-color:rgb(255, 255, 255);
+    font-size:16px;
+    padding-bottom:25px;
+   }
+
+
+   .card {
+     border: 2px solid rgb(96, 139, 168);
+     border-radius: 5px;
+     max-width:185px;
+     min-height:175px;
+       display: flex;
+       flex-direction: column;
+   }
+
+   .card .content {
+       padding: 0;
+       flex: 1 1 auto;
+       font-size:16px;
+   }
+
+   .card content img {
+    border-radius: 5px;
+   }
+
+   .card footer {
+       background-color: rgba(96, 139, 168, .2);
+       padding: 10px;
+       font-size:16px;
+   }
+/************/
+.logotext{
+    color:white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:36px;
+    font-weight:bold;
+}
+
+.container_quote{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    flex:1;
+    font-size:36px;
+    color:#1F2937;
+    background-color:#E5E7EB;
+    padding-left:5%;
+    padding-right:5%;
+}
+
+.container_quote p{
+    display:flex;
+    padding:25px;
+    font-size:36px;
+    font-style:italic;
+    flex:auto;
+}
+
+.quoteauthor{
+    font-weight:bold;
+    display:flex;
+    font-size:24px;
+    justify-content:flex-end;
+}
+
+.cnt_CTA_container{
+    display:flex;
+    flex-flow:row wrap;
+    justify-content:space-evenly;
+    align-items:center;
+    flex:auto;
+/*    background-color:#3882f6;
+*/ 
+    background-image: linear-gradient(140deg, #3882f6 0%, #188000 50%, #3882F6 75% );    
+    opacity: 0.95;
+    border-radius:15px;   
+    color:#FFF;
+    min-height:125px;
+    margin-top:15px;
+    margin-bottom:15px;
+}
+
+.cnt_CTA_container button{
+    border-color:white;
+}
+
+.header{
+    justify-content:space-between;    
+    margin: 0;
+    flex:1 1 auto;
+    padding-left:5%;
+    padding-right:5%;
+}
+
+.footer{
+    flex-flow:row wrap;
+    justify-content:center;
+    align-items:center;
+    padding-left:5%;
+    padding-right:5%;
+    min-height:75px;
+}
+
+.header p{
+    margin:auto;
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    width:100%;
+    margin:0;
+    flex:1;
+}
+
+.navigation{
+    list-style-type: none;
+    margin:0;
+    margin-top:15px;
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-end;
+    gap:15px;
+}
+
+.navigation a:link,.navigation a:active,.navigation a:visited,.navigation a:hover{
+    text-decoration: none;
+    color:#E5E7EB;
+    font-size:18px;
+    padding:5px;
+    border:1px solid #1F2937;
+}
+
+.navigation a:active,.navigation a:hover{
+    text-decoration: none;
+    color:#E5E7EB;
+    background-color:#3882f6;
+    font-size:18px;
+    padding:5px;
+    border:1px solid white;
+}
+
+.leftpanel {
+    display:flex;
+    flex-flow:column wrap;
+    flex:auto;
+    color:#F9FAF8;
+    font-size:18px;
+    max-width:900px;
+}
+
+.leftpanel div{
+    display:flex;
+    justify-content: flex-end;
+}
+
+.leftpanel p{
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+.rightpanel{
+    display:flex;
+}
+
+@media only screen and (max-width: 980px) {
+    .rightpanel, .rightpanel img {
+        display:none;
+  }
+}
+
+.hero-main-text{
+    color:#F9FAF8;
+    font-size:48px;
+    font-weight:bolder;
+}
+
+button{
+    color:#FFF;
+    background-color:#3882F6;
+    width:100px;
+    min-height:35px;
+    border-radius: 5px;
+    transition-duration: 0.4s;
+}
+  
+  .buttoncta:hover {
+    background-color: #FFF;
+    color: black;
+  }

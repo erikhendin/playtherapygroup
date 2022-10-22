@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ .wrapper, html, body {
+    height: 100%;
+    margin: 0;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+#row1 {
+    background-color: red;
+}
+#row2 {
+    background-color: blue;
+}
+#row3 {
+    background-color: green;
+    flex:2;
+    display: flex;
+}
+#col1 {
+    background-color: yellow;
+    flex: 0 0 240px;
+    min-height: 100%;/* chrome needed it a question time , not anymore */
+}
+#col2 {
+    background-color: orange;
+    flex: 1 1;
+    min-height: 100%;/* chrome needed it a question time , not anymore */
+}
+#col3 {
+    background-color: purple;
+    flex: 0 0 240px;
+    min-height: 100%;/* chrome needed it a question time , not anymore */
+}
+ 
+
+    </style>
+</head>
+<body>
+
+
+
+
+<div class="wrapper">
+    <div id="row1">this is the header</div>
+    <div id="row2">this is the second line</div>
+    <div id="row3">
+        <div id="col1">col1</div>
+        <div id="col2">col2</div>
+        <div id="col3">col3</div>
+    </div>
+</div>
+      
+</body>
+</html>
